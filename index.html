@@ -2,7 +2,6 @@
 <html>
 <head>
   <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <!-- 載入 MindAR 與 3D 引擎 -->
   <script src="https://aframe.io/releases/1.5.0/aframe.min.js"></script>
   <script src="https://cdn.jsdelivr.net/npm/mind-ar@1.2.5/dist/mindar-image-aframe.prod.js"></script>
   <style>
@@ -10,7 +9,6 @@
   </style>
 </head>
 <body>
-  <!-- imageTargetSrc: 換成你嘅 .mind 檔名 -->
   <a-scene
     mindar-image="imageTargetSrc: ./targets.mind;"
     color-space="sRGB"
@@ -20,14 +18,12 @@
   >
     <a-camera position="0 0 0" look-controls="enabled: false"></a-camera>
 
-    <!-- targetIndex: 0 代表第一張閃貼圖 -->
     <a-entity mindar-image-target="targetIndex: 0">
-      <!-- gltf-model: 換成你嘅 .glb 3D 模型檔名；scale 可以調大細；position 調高低前後 -->
       <a-gltf-model
         src="./model.glb"
-        position="0 0 0.1"
-        scale="0.5 0.5 0.5"
-        rotation="0 0 0"
+        position="0 0 0.25"
+        scale="1 1 01"
+        rotation="90 0 0"
       ></a-gltf-model>
     </a-entity>
   </a-scene>
